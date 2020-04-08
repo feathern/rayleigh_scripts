@@ -216,6 +216,7 @@ Contains
         Do i = 1, nth
         Do p = 1, nphi
             odata(p,i,j) = (irdata(p,i,j)*sintheta(i) + itdata(p,i,j)*costheta(i))*cosphi(p)
+            odata(p,i,j) = odata(p,i,j)-ipdata(p,i,j)*sinphi(p)
         Enddo
         Enddo
         Enddo
@@ -230,6 +231,7 @@ Contains
         Do i = 1, nth
         Do p = 1, nphi
             odata(p,i,j) = (irdata(p,i,j)*sintheta(i) + itdata(p,i,j)*costheta(i))*sinphi(p)
+            odata(p,i,j) = odata(p,i,j)+ipdata(p,i,j)*cosphi(p)
         Enddo
         Enddo
         Enddo
